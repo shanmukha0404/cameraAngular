@@ -14,4 +14,11 @@ export class CommonService {
   {
     return this._http.get(this._url);
   }
+
+
+display(id)
+{
+  return this._http.get('http://localhost:3000/itemList/'+id);
+}
+
 }

@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-  <app-header></app-header>
+  
       <!-- =============Coursole Part goes here======================== -->
   <div class="container mw-100 d-flex p-2 justify-content-center">
     <div class="carousels" width="1100px" heigth="450px">
@@ -98,7 +98,7 @@
                   <div class="card-body">
                     <h5>{{card.brand}}</h5>
                     <p class="card-text">{{card.model}}</p>
-                    <a href="#" class="btn btn-success" [routerLink]="['landing/',card.id]" routerLinkActive="active">Submit</a>
+                    <button class="btn btn-success" (click)="landingPage(card)" >Submit</button>
                   </div>
                 </div>
          </div>
@@ -106,6 +106,6 @@
       
     </div>
   </div>
-  <app-footer></app-footer>
+  
 </body>
 </html>

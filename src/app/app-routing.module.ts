@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:'', redirectTo:'home',pathMatch:'full'},
   {path:'home',component:ListingComponent},
-  {path:'home/landing/:id',component:LandingComponent},
+  {path:'landing/:id',component:LandingComponent} 
 ];
 
 @NgModule({

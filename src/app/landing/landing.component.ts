@@ -1,3 +1,4 @@
+import { CommonService } from './../common.service';
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
@@ -9,13 +10,25 @@ import {ActivatedRoute} from '@angular/router';
 export class LandingComponent implements OnInit {
 
   product_id: number;
-  constructor(private actRoute : ActivatedRoute)
+  data:any;
+  constructor(private actRoute : ActivatedRoute, private commonService:CommonService)
   {
     this.product_id= this.actRoute.snapshot.params.id;
   }
 
   ngOnInit(): void {
+    let p_id =parseInt(this.actRoute.snapshot.params.id);
+    this.product_id=p_id;
+    this.display();
   }
 
+  display()
+  {
+    this.commonService.display(this.product_id).subscribe(resp=>{
+      this.data=resp;
+      console.log(this.data);
+    }
+    )}
+  
 
 }
