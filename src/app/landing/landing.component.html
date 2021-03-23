@@ -1,0 +1,92 @@
+<div *ngFor="let card of itemList">
+<div class="container-fluid" *ngIf="card.id==1" >
+    <div class="row">
+        <div class="col-sm col-md-2">
+            <img class="img-fluid img-center" [src]="[card.images[0]]" id="img1"/>
+        </div>
+        <div class="col-sm col-md-2">
+            <img class="img-fluid img-center" [src]="[card.images[2]]" id="img2"/>
+        </div>
+        <div class="col-sm col-md-2">
+            <img class="img-fluid img-center" [src]="[card.images[3]]" id="img3"/>
+        </div>
+        <div class="col-sm col-md-2">
+            <img class="img-fluid img-center" [src]="[card.images[1]]" id="img4"/>
+        </div>
+
+        <div class="col-sm col-md-4">
+            <div class="p-2 bd-highlight">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" id="model">hello world {{card.model}} </h5>
+                        <p class="card-text" id="price">{{card.price}}</p>
+                        <a href="#" class="btn btn-primary mt-2">Buy Now</a>&nbsp;&nbsp;&nbsp;
+                        <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="table-primary">
+                        <th scope="col">Features</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>   
+                <tbody>
+                    <tr>
+                        <td>Brand</td>
+                        <td>{{card.brand}}</td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td>{{card.type}}</td>
+                    </tr>
+                    <tr>
+                        <td>Model</td>
+                        <td>{{card.model}}</td>
+                    </tr>
+                    <tr>
+                        <td>ISO Range</td>
+                        <td>{{card.isoRange}}</td>
+                    </tr>
+                    <tr>
+                        <td>Resolution</td>
+                        <td>{{card.resolution}}</td>
+                    </tr>
+                    <tr>
+                        <td>Touch Screen</td>
+                        <td>{{card.touchScreen}}</td>
+                    </tr>
+                    <tr>
+                        <td>Built-In Flash</td>
+                        <td>{{card.builtInFlash}}</td>
+                    </tr>
+                    <tr>
+                        <td>Live View</td>
+                        <td>{{card.liveView}}</td>
+                    </tr>
+                    <tr>
+                        <td>GPS</td>
+                        <td>{{card.gps}}</td>
+                    </tr>
+                    <tr>
+                        <td>HDR Model</td>
+                        <td>{{card.hdrModel}}</td>
+                    </tr>
+                    <tr>
+                        <td>Dual Memory</td>
+                        <td>{{card.dualMemoryCard}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</div>
