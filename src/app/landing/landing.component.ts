@@ -30,9 +30,18 @@ export class LandingComponent implements OnInit {
     }
     )}
 
-    cart()
+    cart(cart)
     {
-      this.router.navigate(['/cart'])
+      let data1=
+      {
+        item_id:cart.id,
+        name:cart.model,
+        price:cart.price
+
+      }
+      console.log(data1);
+      this.commonService.cartData(data1);
+      this.router.navigate(['/cart']);
     }
   
 
