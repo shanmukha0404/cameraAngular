@@ -7,6 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class CommonService {
 
   _url ="http://localhost:3000/itemList";
+  _url1 ="http://localhost:3000/cart";
 
   constructor(private _http:HttpClient) { }
 
@@ -15,10 +16,23 @@ export class CommonService {
     return this._http.get(this._url);
   }
 
+  getAllCartItems()
+  {
+    return this._http.get(this._url1);
+  }
 
 display(id)
 {
   return this._http.get('http://localhost:3000/itemList/'+id);
 }
+
+
+cartData(data)
+{
+  this._http.post(this._url1,data).subscribe();
+  console.log(data);
+}
+
+
 
 }
