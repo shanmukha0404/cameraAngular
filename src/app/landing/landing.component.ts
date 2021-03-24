@@ -1,6 +1,6 @@
 import { CommonService } from './../common.service';
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -11,7 +11,7 @@ export class LandingComponent implements OnInit {
 
   product_id: number;
   data:any;
-  constructor(private actRoute : ActivatedRoute, private commonService:CommonService)
+  constructor(private actRoute : ActivatedRoute, private commonService:CommonService,private router:Router)
   {
     this.product_id= this.actRoute.snapshot.params.id;
   }
@@ -29,6 +29,11 @@ export class LandingComponent implements OnInit {
       console.log(this.data);
     }
     )}
+
+    cart()
+    {
+      this.router.navigate(['/cart'])
+    }
   
 
 }
