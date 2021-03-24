@@ -9,6 +9,7 @@ import { ListingComponent } from './listing/listing.component';
 import { LandingComponent } from './landing/landing.component';
 import { MainComponent } from './main/main.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ListingComponent,
     LandingComponent,
-    MainComponent
+    MainComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
