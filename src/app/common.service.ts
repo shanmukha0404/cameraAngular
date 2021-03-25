@@ -33,6 +33,10 @@ cartData(data)
   console.log(data);
 }
 
+deleteCart(d)
+{
+  return this._http.delete(this._url1+"/"+d.id);
+}
 
 
 }
