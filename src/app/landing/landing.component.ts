@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent  {
 
   product_id: number;
   data:any;
@@ -36,8 +36,8 @@ export class LandingComponent implements OnInit {
       {
         item_id:cart.id,
         name:cart.model,
-        price:cart.price
-
+        price:cart.price,
+        image:cart.images[0]
       }
       console.log(data1);
       this.commonService.cartData(data1);
