@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient,HttpParams } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +37,17 @@ deleteCart(d)
 {
   return this._http.delete(this._url1+"/"+d.id);
 }
+
+getFilter(camera:any){
+  let cameraList:any= camera;
+  console.log(cameraList);
+  let params = new HttpParams();
+  params = params.append('type', cameraList);
+  return this._http.get(this._url, {params:params});
+}
+
+
+
 
 
 }
